@@ -12,10 +12,6 @@ server.get('/', (req, res) => {
   });
 });
 
-server.get('/about.html', (req, res) => {
-  res.send('The about page');
-});
-
 server.use('/api', apiRouter);
 server.use(express.static('public')); // Middleware that serves static assets under the 'public' folder
 
